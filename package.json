@@ -7,6 +7,8 @@
     "test": "cargo test",
     "build": "make build",
     "build-l": "make build-logs",
+    "id": "soroban config identity generate acc1 && soroban config identity address acc1",
+    "reset": "rm -rf ./.soroban/events.json && rm -rf ./.soroban/ledger.json",
     "inv": ". ./scripts/inv.sh",
     "inv_v": ". ./scripts/inv_v.sh",
     "inv_e": ". ./scripts/inv_e.sh",
