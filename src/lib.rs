@@ -54,7 +54,6 @@ const MAX: u32 = 10;
 #[contracttype]
 enum DataKey {
     Counter(Address), // The key corresponding to a counter associated with an address.
-                      // History(Address), // The key corresponding to a history associated with an address.
 }
 
 // Primary contract structure representing a counter with controlled increment capability.
