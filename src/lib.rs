@@ -16,15 +16,27 @@
 // Here we're bringing in the `AdditionContract` structure and the `Sum` trait.
 use crate::addition_contract::{AdditionContract, Sum};
 
+// Macro:
+// Definition: A reusable chunk of code expanded at compile-time.
+// Soroban SDK: Used for tasks like generating specific data types.
+
+// Attribute Macro:
+// Definition: A macro applied to items using #[macro_name], modifying their behavior.
+// Soroban SDK: Marks types or functions for special handling, like contract. Signals to the SDK how to handle them or the special behavior they should exhibit.
+
+// Struct:
+// Definition: A custom data type grouping different values together.
+// Soroban SDK: Represents elements like contract identifiers (Address) or the execution environment (Env).
+
 // Import the necessary definitions from the `soroban_sdk` crate.
 use soroban_sdk::{
-    contract,      // Marks a type as being the type that contract functions are attached for.
-    contracterror, // Generates conversions from the repr(u32) enum from/into an Error.
-    contractimpl,  // Exports the publicly accessible functions to the Soroban environment.
-    contracttype,  // Generates conversions from the struct/enum from/into a Val.
-    symbol_short,  // Create a short Symbol constant with the given string.
-    Address,       // Address is a universal opaque identifier to use in contracts.
-    Env,           // Provides access to the environment the contract is executing within.
+    contract, // (attribute macro) Marks a type as being the type that contract functions are attached for.
+    contracterror, // (attribute macro) Generates conversions from the repr(u32) enum from/into an Error.
+    contractimpl, // (attribute macro) Exports the publicly accessible functions to the Soroban environment.
+    contracttype, // (attribute macro) Generates conversions from the struct/enum from/into a Val.
+    symbol_short, // (macro) Create a short Symbol constant with the given string.
+    Address,      // (struct) Address is a universal opaque identifier to use in contracts.
+    Env,          // (struct) Provides access to the environment the contract is executing within.
 };
 
 // Define custom error types specific to the operations of this contract.
