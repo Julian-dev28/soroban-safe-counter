@@ -19,10 +19,7 @@ contract AdditionContract is AdditionInterface {
     /// @param a First unsigned integer.
     /// @param b Second unsigned integer.
     /// @return sum Returns the sum of `a` and `b`.
-    function add(
-        uint256 a,
-        uint256 b
-    ) public pure override returns (uint256 sum) {
+    function add(uint256 a, uint256 b) public pure returns (uint256 sum) {
         sum = a + b; // Compute the sum of `a` and `b`.
     }
 }
