@@ -72,7 +72,7 @@ impl SafeCounter {
         // included in args as it's guaranteed to be authenticated).
         // user.require_auth_for_args((value,).into_val(&env));
 
-        if value < MAX {
+        if value <= MAX {
             // Construct a key for the data being stored. Use an enum to set the
             // contract up well for adding other types of data to be stored.
             let key = DataKey::Counter(user.clone());
