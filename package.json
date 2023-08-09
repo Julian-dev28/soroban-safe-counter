@@ -11,7 +11,8 @@
     "reset": "rm -rf ./.soroban/events.json && rm -rf ./.soroban/ledger.json",
     "inv": ". ./scripts/inv.sh",
     "inv_v": ". ./scripts/inv_v.sh",
-    "inv_e": ". ./scripts/inv_e.sh",
+    "inv_ea": ". ./scripts/inv_ea.sh",
+    "inv_ee": ". ./scripts/inv_ee.sh",
     "get_c": ". ./scripts/get_c.sh",
     "get_ce": ". ./scripts/get_ce.sh"
   },

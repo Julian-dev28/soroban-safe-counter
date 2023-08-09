@@ -3,5 +3,6 @@ soroban contract invoke \
     --wasm target/wasm32-unknown-unknown/release-with-logs/soroban_safe_counter_contract.wasm \
     --id 1 \
     -- \
-    get_count \
-    --user GDPT3C3KUNGMSJBAELIQ2NIV52LDG2XPW4EOANKGDCAKLG6OAH3RPB2D
+    increment \
+    --user GDPT3C3KUNGMSJBAELIQ2NIV52LDG2XPW4EOANKGDCAKLG6OAH3RPB2D \
+    --value 100
