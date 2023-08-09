@@ -3,8 +3,8 @@ extern crate std;
 
 use soroban_sdk::{
     symbol_short,
-    testutils::{Address as _, AuthorizedFunction, AuthorizedInvocation},
-    Address, Env, IntoVal,
+    testutils::{Address as _, AuthorizedFunction, AuthorizedInvocation, Events},
+    vec, Address, Env, IntoVal,
 };
 
 use crate::{SafeCounter, SafeCounterClient};
@@ -45,6 +45,19 @@ fn test() {
                 sub_invocations: std::vec![]
             }
         )]
+    );
+
+    // Checking if the emitted events in the environment match the expected event
+    assert_eq!(
+        env.events().all(),
+        vec![
+            &env,
+            (
+                contract_id.clone(),
+                (symbol_short!("increment"), user_1.clone(), 5_u32).into_val(&env),
+                5_u32.into_val(&env)
+            ),
+        ]
     );
 
     // Do more `increment` calls. It's not necessary to verify authorizations

@@ -5,4 +5,4 @@ soroban contract invoke \
     -- \
     increment \
     --user GDPT3C3KUNGMSJBAELIQ2NIV52LDG2XPW4EOANKGDCAKLG6OAH3RPB2D \
-    --value 1
+    --value 5
