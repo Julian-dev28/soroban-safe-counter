@@ -74,6 +74,7 @@ impl SafeCounter {
 
         if value <= MAX {
             // Construct a key for the data being stored. Use an enum to set the
+            // contract up well for adding other types of data to be stored.
             let key = DataKey::Counter(user.clone());
 
             // Get the current count for the invoker.
