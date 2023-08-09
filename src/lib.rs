@@ -80,11 +80,6 @@ impl SafeCounter {
         // This call is equilvalent to the above:
         // user.require_auth_for_args((&user, value).into_val(&env));
 
-        // The following has less arguments but is equivalent in authorization
-        // scope to the above calls (the user address doesn't have to be
-        // included in args as it's guaranteed to be authenticated).
-        // user.require_auth_for_args((value,).into_val(&env));
-
         if value <= MAX {
             // Construct a key for the data being stored. Use an enum to set the
             // contract up well for adding other types of data to be stored.
