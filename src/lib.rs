@@ -13,8 +13,8 @@
 #![no_std]
 
 // Import the required functionality from the `addition_contract` module.
-// Here we're bringing in the `AdditionContract` structure and the `Sum` trait.
-use crate::addition_contract::{AdditionContract, Sum};
+// Here we're bringing in the `AdditionContract` structure and the `AdditionTrait` trait.
+use crate::addition_contract::{AdditionContract, AdditionTrait};
 
 // Macro:
 // Definition: A reusable chunk of code expanded at compile-time.
@@ -93,7 +93,7 @@ impl SafeCounter {
             // Get the current count for the invoker.
             let mut count: u32 = env.storage().persistent().get(&key).unwrap_or(0);
 
-            // Increment the count using the `Adder` trait.
+            // Increment the count using the `AdditionTrait` trait.
             count = AdditionContract::add(count, value);
 
             // Save the count.
