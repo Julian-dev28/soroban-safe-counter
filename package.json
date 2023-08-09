@@ -1,0 +1,29 @@
+{
+  "name": "soroban-safe-counter",
+  "version": "1.0.0",
+  "description": "A counter built on Soroban that leverages Auth",
+  "main": "index.js",
+  "scripts": {
+    "test": "cargo test",
+    "build": "make build",
+    "build-l": "make build-logs",
+    "inv": ". ./scripts/inv.sh",
+    "inv_v": ". ./scripts/inv_v.sh",
+    "inv_e": ". ./scripts/inv_e.sh",
+    "get_c": ". ./scripts/get_c.sh",
+    "get_ce": ". ./scripts/get_ce.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Julian-dev28/soroban-safe-counter.git"
+  },
+  "keywords": [
+    "safecounter"
+  ],
+  "author": "Julian Martinez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Julian-dev28/soroban-safe-counter/issues"
+  },
+  "homepage": "https://github.com/Julian-dev28/soroban-safe-counter#readme"
+}
