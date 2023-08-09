@@ -23,7 +23,7 @@ use soroban_sdk::{
     contractimpl,  // Exports the publicly accessible functions to the Soroban environment.
     contracttype,  // Generates conversions from the struct/enum from/into a Val.
     symbol_short,  // Create a short Symbol constant with the given string.
-    Address,       // 	Address is a universal opaque identifier to use in contracts.
+    Address,       // Address is a universal opaque identifier to use in contracts.
     Env,           // Provides access to the environment the contract is executing within.
 };
 
