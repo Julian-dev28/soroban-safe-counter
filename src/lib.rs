@@ -45,6 +45,7 @@ use soroban_sdk::{
 #[repr(u32)]
 pub enum Error {
     MaxValueExceeded = 0, // Error to indicate an attempt to exceed the allowed maximum value.
+                          // ValueTooLow = 1,      // Error to indicate an attempt to decrement the counter below zero.
 }
 
 // Define the upper limit for the counter.
@@ -53,7 +54,7 @@ const MAX: u32 = 10;
 // Tuple enum is used to define a key for the data being stored.
 #[contracttype]
 enum DataKey {
-    Counter(Address), // The key corresponding to a counter associated with an address.
+    Counter(Address), // => u32 The key corresponding to a counter associated with an address.
 }
 
 // Primary contract structure representing a counter with controlled increment capability.
