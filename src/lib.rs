@@ -92,7 +92,7 @@ impl SafeCounter {
             count = AdditionContract::add(count, value);
 
             // Save the count.
-            env.storage().persistent().set(&key, &count);
+            env.storage().instance().set(&key, &count);
 
             // Publish the count to the caller.
             env.events()
